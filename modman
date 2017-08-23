@@ -1,0 +1,4 @@
+app/code/local/FW/ExactTarget app/code/local/FW/ExactTarget
+app/etc/modules/FW_Exacttarget.xml app/etc/modules/FW_Exacttarget.xml
+app/locale/en_US/template/email/* app/locale/en_US/template/email/
+lib/ExactTarget lib/ExactTarget

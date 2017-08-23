@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_Google_Adwords
+ * @copyright   Copyright (c) 2012 F+W Media, Inc. (http://www.fwmedia.com)
+ */
+-->
+<config>
+    <sections>
+        <thirdparty>
+            <groups>
+                <exacttarget translate="label">
+                    <label>Exact Target</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>0</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <mid translate="label">
+                            <label>MID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mid>
+
+                        <lists translate="label">
+                            <label>List Names (Comma Separated)</label>
+                            <sort_order>30</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </lists>
+
+                        <master_de_key>
+                            <label>Master Data Extension Key</label>
+                            <sort_order>30</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </master_de_key>
+
+                        <community_de_key>
+                            <label>Community Data Extension Key</label>
+                            <sort_order>31</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </community_de_key>
+
+                        <purchase_de_key>
+                            <label>Purchase Info Data Extension Key</label>
+                            <sort_order>32</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </purchase_de_key>
+
+                        <campaign_de_key>
+                            <label>GA Campaign Data Extension Key</label>
+                            <sort_order>33</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </campaign_de_key>
+
+                        <thankyou_page>
+                            <label>Thank you page (Full URL)</label>
+                            <sort_order>40</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>                        
+                        </thankyou_page>
+
+                        <error_page>
+                            <label>Error Page (Full URL)</label>
+                            <sort_order>50</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>                        
+                        </error_page>
+                    </fields>
+                </exacttarget>
+                
+                <exacttarget_datafeed translate="label">
+                    <label>Exact Target Datafeed </label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <image_cdn_address translate="label tooltip comment">
+                            <label>Image CDN Address</label>
+                            <comment>CDN value for the image urls in the datafeed</comment>
+                            <tooltip>CDN value for the image urls in the datafeed</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </image_cdn_address>
+                        <ftp_host translate="label tooltip comment">
+                            <label>FTP Host</label>
+                            <comment></comment>
+                            <tooltip></tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ftp_host>
+                       <ftp_user translate="label tooltip comment">
+                            <label>FTP User</label>
+                            <comment></comment>
+                            <tooltip></tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ftp_user>
+                        <ftp_password translate="label tooltip comment">
+                            <label>FTP Password</label>
+                            <comment></comment>
+                            <tooltip></tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ftp_password>
+                        <ftp_location translate="label tooltip comment">
+                            <label>FTP Location</label>
+                            <comment>This must be the full path of the directory starting with the "/". If left blank, it will default to the root directory.</comment>
+                            <tooltip>This must be the full path of the directory starting with the "/". If left blank, it will default to the root directory.</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ftp_location>                        
+                        <emailnotice translate="label tooltip comment">
+                            <label>Notification Email Addresses</label>
+                            <comment>Please enter email address(es) to notify in case of processing errors.</comment>
+                            <tooltip>Comma delimited for multiple addresses</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </emailnotice> 
+                    </fields>
+                </exacttarget_datafeed>
+
+                <exacttarget_mbu>
+                    <label>Exacttarget MBU Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <beading_lists translate="label">
+                            <label>Beading Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Beadinglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </beading_lists>
+                        <crochet_lists translate="label">
+                            <label>Crochet Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Crochetlists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </crochet_lists>
+                        <jewelrymaking_lists translate="label">
+                            <label>Jewelry Making Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Jewelrymakinglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </jewelrymaking_lists>
+                        <knitting_lists translate="label">
+                            <label>Knitting Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Knittinglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </knitting_lists>
+                        <mixedmedia_lists translate="label">
+                            <label>Mixed Media Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Mixedmedialists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mixedmedia_lists>
+                        <needlework_lists translate="label">
+                            <label>Needlework Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Needleworklists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </needlework_lists>
+                        <quilting_lists translate="label">
+                            <label>Quilting Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Quiltinglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </quilting_lists>
+                        <sewing_lists translate="label">
+                            <label>Sewing Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Sewinglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sewing_lists>
+                        <spinning_lists translate="label">
+                            <label>Spinning Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Spinninglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </spinning_lists>
+                        <weaving_lists translate="label">
+                            <label>Weaving Lists</label>
+                            <comment>List Names need to be comma-separated</comment>
+                            <frontend_model>FW_ExactTarget_Block_Weavinglists</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </weaving_lists>
+                    </fields>
+                </exacttarget_mbu>
+            </groups>
+        </thirdparty>
+    </sections>
+</config>

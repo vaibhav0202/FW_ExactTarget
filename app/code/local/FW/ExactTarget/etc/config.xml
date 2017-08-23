@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FW_ExactTarget>
+            <version>0.2.0</version>
+        </FW_ExactTarget>
+    </modules>
+    <global>
+
+        <resources>
+            <exacttarget_setup>
+                <setup>
+                    <module>FW_ExactTarget</module>
+                    <class>Mage_Customer_Model_Resource_Setup</class>
+                </setup>
+            </exacttarget_setup>
+        </resources>
+
+        <models>
+            <fw_exacttarget>
+                <class>FW_ExactTarget_Model</class>
+            </fw_exacttarget>
+
+			<newsletter>
+				<rewrite>
+					<subscriber>FW_ExactTarget_Model_Subscriber</subscriber>
+				</rewrite>
+			</newsletter>            
+        </models>
+
+        <helpers>
+            <fw_exacttarget>
+                <class>FW_ExactTarget_Helper</class>
+            </fw_exacttarget>
+        </helpers>
+
+    	<events>
+     		<controller_action_postdispatch_customer_account_createpost>
+                <observers>
+                    <fw_exacttarget>
+                        <class>FW_ExactTarget_Model_Observer</class>
+						<method>exactTargetSignupAfterRegister</method>
+                    </fw_exacttarget>
+                </observers>
+            </controller_action_postdispatch_customer_account_createpost>
+
+            <controller_action_postdispatch_customer_account_editPost>
+                <observers>
+                    <fw_exacttarget>
+                        <class>FW_ExactTarget_Model_Observer</class>
+                        <method>exactTargetProfileUpdate</method>
+                    </fw_exacttarget>
+                </observers>
+            </controller_action_postdispatch_customer_account_editPost>
+
+            <controller_action_predispatch_newsletter_subscriber_new>
+                <observers>
+                    <fw_exacttarget>
+                      <class>FW_ExactTarget_Model_Observer</class>
+                      <method>exactTargetNewsLetterQuickSubscribe</method>
+                    </fw_exacttarget>
+                </observers>
+            </controller_action_predispatch_newsletter_subscriber_new>
+
+            <sales_order_place_after>
+                <observers>
+                    <fw_exacttarget_order_place>
+                        <class>FW_ExactTarget_Model_Observer</class>
+                        <method>onOrderPlace</method>
+                    </fw_exacttarget_order_place>
+                </observers>
+            </sales_order_place_after>
+
+            <controller_front_init_routers>
+                <observers>
+                    <fw_exacttarget_init_routers>
+                        <class>FW_ExactTarget_Model_Observer</class>
+                        <method>setUtmCookie</method>
+                    </fw_exacttarget_init_routers>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+    </global>
+
+    <crontab>
+        <jobs>
+            <fw_check_queue>
+                <schedule>
+                    <cron_expr>0 0 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>fw_exacttarget/observer::checkQueueItems</model>
+                </run>
+            </fw_check_queue>
+        </jobs>
+    </crontab>
+</config>
